@@ -18,7 +18,7 @@ script:
 after_success:
  - docker build -t ajw9491/docker-frontend ./frontend
  - docker build -t ajw9491/docker-backend ./backend
- - docker build -t ajw9491/docker-nginx ./enginx
+ - docker build -t ajw9491/docker-nginx ./nginx
 
  #도커 허브에 빌드된 파일을 넣어주기 위해 도커 허브 로그인
  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
