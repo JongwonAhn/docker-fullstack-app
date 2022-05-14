@@ -28,15 +28,15 @@ after_success:
  - docker push ajw9491/docker-backend
  - docker push ajw9491/docker-nginx
 
- deploy:
-  provider: elasticbeanstack
-  region: "us-east-1"
-  app: "docker-fullstack-app"
-  env: "Dockerfullstackapp-env"
-  bucket_name: elasticbeanstalk-us-east-1-449753732704
-  bucket_path: "docker-fullstack-app"
-  on:
-   branch: main
+deploy:
+ provider: elasticbeanstack
+ region: "us-east-1"
+ app: "docker-fullstack-app"
+ env: "Dockerfullstackapp-env"
+ bucket_name: elasticbeanstalk-us-east-1-449753732704
+ bucket_path: "docker-fullstack-app"
+ on:
+  branch: main
 
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key: $AWS_SECRET_ACCESS_KEY
