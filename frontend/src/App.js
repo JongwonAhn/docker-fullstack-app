@@ -24,6 +24,7 @@ function App() {
   }
 
   const submitHandler = (event) => {
+    alert("testing");
     event.preventDefault();
 
     axios.post('/api/value', { value: value })

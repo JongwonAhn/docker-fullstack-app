@@ -10,14 +10,14 @@ const app = express();
 // json 형대토 오는 요청의 본문을 해석해줄수있게 등록
 app.use(bodyParser.json());
 
-// // 테이블 생성하기 
-// db.pool.query(`CREATE TABLE lists (
-//     id INTEGER AUTO_INCREMENT,
-//     value TEXT, 
-//     PRIMARY KEY (id)
-// )`, (err, results, fileds) => {
-//     console.log('results', results)
-// })
+// 테이블 생성하기 
+db.pool.query(`CREATE TABLE lists (
+    id INTEGER AUTO_INCREMENT,
+    value TEXT, 
+    PRIMARY KEY (id)
+)`, (err, results, fileds) => {
+    console.log('results', results)
+})
 
 app.get('/api/hi', function (req, res) {
     //데이테베이스에서 모든 정보 가져오기 
